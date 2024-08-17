@@ -3,8 +3,8 @@ class House:
     houses_history = []
 
     def __new__(cls, *args, **kwargs):
-        instanse = super(House, cls).__new__(cls)
-        return instanse
+        instance = super(House, cls).__new__(cls)
+        return instance
 
     def __init__(self, name, number_of_floors):
         self.name = name
@@ -18,19 +18,19 @@ class House:
 
 h1 = House(" ЖК Эльбрус", 10)
 for e in House.houses_history:
-    print(e[0], e[1], end='', sep=' ')
+    print(e[0], end="", sep=", ")
 print()
 h2 = House(" ЖК Акация", 20)
 for e in House.houses_history:
-    print(e[0], e[1], end='', sep=' ')
+    print(e[0], end='', sep=', ')
 print()
 h3 = House(" ЖК Матрешки", 20)
 for e in House.houses_history:
-    print(e[0], e[1], end='', sep=' ')
+    print(e[0], end='', sep=', ')
 print()
 del h2
 del h3
 for e in House.houses_history:
-    print(e[0], e[1], end='', sep=' ')
+    print(e[0], end='')
 print()
 del h1
